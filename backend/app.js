@@ -3,6 +3,10 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerSpecs = require('./swagger/swagger');
 const app = express();
 const port = 3000;
+const dbConnect = require("./config/dbConnect")
+
+// db 연결
+dbConnect()
 
 // 미들웨어 설정
 app.use(express.json());
