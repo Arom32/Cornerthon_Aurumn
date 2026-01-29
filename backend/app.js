@@ -14,6 +14,10 @@ app.use(express.json());
 // Swagger 연동
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
+// KOPIS 테스트 라우트
+const testRouter = require('./routes/kopisTest');
+app.use('/test', testRouter);
+
 // 기본 라우트
 app.get('/', (req, res) => {
   res.send('Cornerthon Team 2 Server is Running!');
