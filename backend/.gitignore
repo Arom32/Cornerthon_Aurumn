@@ -1,2 +1,5 @@
 node_modules
 .env
+board.js
+boardRoutes.js
+controllers
