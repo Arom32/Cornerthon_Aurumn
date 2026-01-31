@@ -86,6 +86,13 @@ router.get('/', controller.getList);
  *   get:
  *     summary: 추천 랭킹 조회 (TOP 10)
  *     tags: [Performances]
+ *     parameters:
+ *       - in: query
+ *         name: genre
+ *         schema:
+ *           type: string
+ *         description: "장르 필터 다중 선택시 ',' 로 구별. ex) 무용(서양/한국무용),대중무용 // * list - 연극, 서양음악(클래식), 뮤지컬, 한국음악(국악), 대중음악, 무용(서양/한국무용), 대중무용, 서커스/마술, 복합"
+ * 
  *     responses:
  *       200:
  *         description: 성공
@@ -116,6 +123,7 @@ router.get('/ranking', controller.getRanking);
  *         schema:
  *           type: string
  *         description: 공연 ID (mt20id)
+ * 
  *     responses:
  *       200:
  *         description: 상세 정보 반환
