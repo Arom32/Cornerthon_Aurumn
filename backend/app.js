@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 });
 
 // 공연 전시 관련 라우트
-const performanceRouter = require('./routes/performance');
+const performanceRouter = require('./routes/performanceRoutes');
 app.use('/api/performances', performanceRouter);
 
 app.listen(port, () => {
