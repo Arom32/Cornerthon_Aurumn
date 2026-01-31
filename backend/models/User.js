@@ -48,7 +48,7 @@ const userSchema = new mongoose.Schema(
             type: Number,
             default: 0
         },
-        // 유저가 쓴 리뷰 개수
+        // 유저가 쓴 리뷰 게시물 개수
         reviewCount: {
             type: Number,
             default: 0
